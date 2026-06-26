@@ -2,6 +2,16 @@ import { motion } from 'framer-motion'
 import Reveal from './Reveal'
 import { skills } from '../data/content'
 
+const tagContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.05 } },
+}
+
+const tag = {
+  hidden: { opacity: 0, scale: 0.85, y: 10 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+}
+
 export default function Skills() {
   return (
     <section id="skills" className="section">
@@ -9,22 +19,23 @@ export default function Skills() {
         <span className="section__index">04.</span> Skills
       </Reveal>
 
-      <div className="skills__list">
-        {skills.map((skill, i) => (
-          <Reveal key={skill.name} delay={i * 0.06} className="skill">
-            <div className="skill__row">
-              <span className="skill__name">{skill.name}</span>
-              <span className="skill__level">{skill.level}%</span>
-            </div>
-            <div className="skill__bar">
-              <motion.div
-                className="skill__fill"
-                initial={{ width: 0 }}
-                whileInView={{ width: `${skill.level}%` }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 1, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </div>
+      <div className="skills__categories">
+        {skills.map((group, i) => (
+          <Reveal key={group.category} delay={i * 0.06} className="skill-group">
+            <h3 className="skill-group__title">{group.category}</h3>
+            <motion.ul
+              className="skill-group__tags"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={tagContainer}
+            >
+              {group.items.map((item) => (
+                <motion.li key={item} variants={tag} whileHover={{ y: -3, transition: { duration: 0.15 } }}>
+                  {item}
+                </motion.li>
+              ))}
+            </motion.ul>
           </Reveal>
         ))}
       </div>
