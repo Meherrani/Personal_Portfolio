@@ -111,6 +111,14 @@ export const projects = [
     link: '',
     repo: '',
   },
+  {
+    title: 'LinkedIn Job Postings Analysis',
+    description:
+      'Analyzed 124K+ LinkedIn job postings by merging multi-table datasets (Companies, Jobs, Skills, Postings) and performing extensive EDA to uncover industry, company, and state-level hiring patterns. Built regression models to estimate salary drivers and visualized industry growth, skills demand, and location trends through rich visual analytics — market-share charts, top-company hiring distributions, and salary trend plots. Recommended the top co-anchor client using a multi-factor evaluation (industry dominance, hiring volume, state distribution, ATS usage, and stock-growth analysis), directly informing the startup\'s strategic client targeting.',
+    tags: ['Python', 'EDA', 'Regression', 'Data Visualization', 'SQL'],
+    link: '',
+    repo: '',
+  },
 ]
 
 export const navLinks = [
