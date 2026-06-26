@@ -104,26 +104,10 @@ export const skills = [
 
 export const projects = [
   {
-    title: 'Cloud ETL/ELT Pipeline Platform',
+    title: 'Autonomous Driving with Deep Reinforcement Learning',
     description:
-      'Designed and maintained scalable batch and streaming data pipelines on Snowflake and AWS (S3, EC2, IAM), with SQL/Python-based ELT transformations to curate analytics-ready datasets across multiple business domains.',
-    tags: ['Snowflake', 'AWS', 'Python', 'SQL'],
-    link: '',
-    repo: '',
-  },
-  {
-    title: 'Production Data Quality & Monitoring Framework',
-    description:
-      'Built data quality checks, audit controls, and error-handling mechanisms alongside automated deployment pipelines and workflow monitoring, reducing manual intervention and improving reliability in production.',
-    tags: ['Data Quality', 'Automation', 'Snowpipe', 'Git'],
-    link: '',
-    repo: '',
-  },
-  {
-    title: 'Leadership KPI Dashboards',
-    description:
-      'Developed interactive Power BI and Tableau dashboards — with drilldowns, parameters, and calculated fields — giving senior leadership real-time visibility into operational and business KPIs.',
-    tags: ['Power BI', 'Tableau', 'SSRS', 'KPI Design'],
+      'Built and trained RL agents (DQN, PPO, A2C) in highway-env to navigate complex driving scenarios like highways, intersections, and roundabouts. Tuned hyperparameters (γ, learning rate) and evaluated agents using mean reward and success rate metrics, achieving 100% success in highway tasks and strong performance in roundabouts using optimal configurations. Gained hands-on experience with model stability and decision-making under uncertainty in safety-critical environments.',
+    tags: ['DQN', 'PPO', 'A2C', 'highway-env', 'Reinforcement Learning', 'Python'],
     link: '',
     repo: '',
   },
